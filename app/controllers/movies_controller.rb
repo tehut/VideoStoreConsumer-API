@@ -19,8 +19,7 @@ class MoviesController < ApplicationController
     else
       render status: :bad_request, json: { errors: movie.errors.messages }
     end
-    # movie = Movie.create(movie_params)
-    # redirect_to movies_path
+    
   end
 
   def show

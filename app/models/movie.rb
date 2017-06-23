@@ -10,6 +10,8 @@ class Movie < ApplicationRecord
 
   def image_url
     orig_value = read_attribute :image_url
+    puts orig_value.class
+    # if orig_value == nil
     if !orig_value
       MovieWrapper::DEFAULT_IMG_URL
     else
